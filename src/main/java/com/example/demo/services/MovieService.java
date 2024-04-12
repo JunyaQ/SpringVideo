@@ -68,7 +68,7 @@ public class MovieService {
     //Search via title
     public List<Movie> searchByTitle(String title){
         System.out.println(title);
-        return searchRepository.findByTitle(title);
+        return searchRepository.findByTitleContaining(title);
     }
 
 

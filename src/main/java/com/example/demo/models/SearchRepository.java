@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface SearchRepository extends MongoRepository<Movie, String> {
-List<Movie> findByTitle(String title);
+List<Movie> findByTitleContaining(String title);
 }
