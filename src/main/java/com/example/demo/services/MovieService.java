@@ -46,12 +46,12 @@ public class MovieService {
     // featured movie
     public List<Movie> getFeaturedMovies() {
 
-        return repository.findFeaturedMovie();
+        return repository.findByIsMovieTrueAndIsFeaturedTrue();
     }
 
     //featured TV
     public List<Movie> getFeaturedTvs(){
-        return repository.findFeaturedTvs();
+        return repository.findByIsMovieFalseAndIsFeaturedTrue();
     }
 
     // get a movie or tv show based on ID

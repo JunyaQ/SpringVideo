@@ -14,8 +14,9 @@ public interface MovieRepository extends MongoRepository<Movie, Integer> {
 
 //    Optional<Movie> findById(String id)
 
-    @Query("SELECT m FROM Movie m WHERE m.isMovie = true AND m.isFeatured = true")
-    List<Movie> findFeaturedMovie();
-    @Query("SELECT m FROM Movie m WHERE m.isMovie = false AND m.isFeatured = true")
-    List<Movie> findFeaturedTvs();
+//    @Query("SELECT m FROM Movie m WHERE m.featured = true AND m.isMovie = true")
+    List<Movie> findByIsMovieTrueAndIsFeaturedTrue();
+
+//    @Query("SELECT m FROM Movie m WHERE m.isMovie = false AND m.isFeatured = true")
+    List<Movie> findByIsMovieFalseAndIsFeaturedTrue();
 }
